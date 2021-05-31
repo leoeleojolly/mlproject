@@ -33,25 +33,25 @@ build:
 
   runs-on: ubuntu-latest
   
-  steps: 
+  steps:
   - uses: actions/checkout@v2
   - name: "Say hello"
-      run: 
+      run:
         echo "Hello, World!"
   - name: "Set up Python ${{ matrix.python-version }}"
     uses: actions/setup-python@v1
     with: 
         python-version: "${{ matrix.python-version }}"
   - name: "Install dependencies"
-    run: |
+    run:
       python -m pip install --upgrade pip
       pip install -r requirements.txt
   - name: "Install package and test"
-    run: 
+    run:
       "make install test clean\n"
 
-  strategy: 
-    matrix: 
+  strategy:
+    matrix:
       python-version: [3.8]
 
   # # 🤖 CD paragraph
