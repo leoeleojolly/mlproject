@@ -36,8 +36,8 @@ build:
   steps:
   - uses: actions/checkout@v2
   - name: Say hello
-      run: |
-        echo "Hello, World!"
+    run: |
+      echo "Hello, World!"
   - name: Set up Python ${{ matrix.python-version }}
     uses: actions/setup-python@v1
     with: 
